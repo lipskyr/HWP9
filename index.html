@@ -77,16 +77,35 @@
 
    
   </style>
+
+    <script>
+
+       function youGotMe() {
+           document.getElementById("thing2").innerHTML = "You got me!!!"
+           document.getElementById("thing3").innerHTML = "I've been gotten!"
+           document.getElementById("thing4").innerHTML = "You are a good getter!"
+           document.getElementById("thing1").src = "exclam.jpg"
+
+       }
+
+
+
+
+
+
+
+      
+    </script>
 </head> 
   
 <body>
   <div class = "title"> 
-    <h1 onclick = "this.innerHTML = 'WOAH! YOU CLICKED ON ME!'; this.style='color: red;';" ondblclick = "this.innerHTML = 'My Layout Example Webpage'; this.style='color: navy;';">My Layout Example Webpage</h1>
+    <h1 id="thing4" onclick = "this.innerHTML = 'WOAH! YOU CLICKED ON ME!'; this.style='color: red;';" ondblclick = "this.innerHTML = 'My Layout Example Webpage'; this.style='color: navy;';">My Layout Example Webpage</h1>
   </div>
 
   <div class="content">
      <h2>Here is where I put the major content of the page!</h2>
-     <marquee><h3>Some of the content might look nice to be on a marquee!</h3></marquee>
+     <marquee onclick="youGotMe();"><h3>Click me if you can!</h3></marquee>
      Hello, <i>World</i>!
      I'm <b>glad</b> you're <u>here</u>!
      <p>
@@ -95,20 +114,20 @@
      There are a lot of reasons why this is a nice page:
      <ul>
        <li>I was able to make it very quickly.</li>
-       <li>I am able to put lots of information on it.</li>
+       <li id="thing2">I am able to put lots of information on it.</li>
        <li>Many parts of it are <strike>speld</strike> spelled right.</li>
      </ul>
 
  </div>
  <div class="picture1">
-     <img src="638x472.jpeg" onclick = "this.style = 'border: 2px black solid;';" width="95%" style="border: 2px white solid;"> 
+     <img id="thing1" src="638x472.jpeg" onclick = "this.style = 'border: 2px black solid;';" width="95%" style="border: 2px white solid;"> 
  </div>
 
  <div class="picture2">
      <img src="reallyhot.jpg" onclick = "this.src = '638x472.jpeg';" width="95%" style="border: 2px white solid;"> 
  </div>
  <div class="footer">
-    <p>
+    <p id="thing3">
       This is the bottom section of the website.  I put the legal disclaimers down here and things that are of lesser importance like for instance that we charge visitors to our website a small processing fee of $15 per click and an additional $2 per minute they spend browsing but we hope no one has scrolled this far so they don't go away.
     </p>
   </div>

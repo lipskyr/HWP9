@@ -74,12 +74,18 @@
   border: 2px dashed black;
    }
 
+      button {
+    font-size: 50px;
+      }
 
    
   </style>
 
     <script>
 
+       var numClicks = 0;
+
+      
        function youGotMe() {
            document.getElementById("thing2").innerHTML = "You got me!!!"
            document.getElementById("thing3").innerHTML = "I've been gotten!"
@@ -87,6 +93,16 @@
            document.getElementById("thing1").src = "exclam.jpg"
 
        }
+
+      function countClicks() {
+            numClicks++;
+            document.getElementById("theButton").disabled = false;
+      }
+
+      function displayCount() {
+             document.getElementById("theMarquee").innerHTML = "<h3>You have clicked on me " + numclicks + " times.</h3>";
+
+      }
 
 
 
@@ -105,7 +121,7 @@
 
   <div class="content">
      <h2>Here is where I put the major content of the page!</h2>
-     <marquee onclick="youGotMe();"><h3>Click me if you can!</h3></marquee>
+     <marquee id="theMarquee" onclick="countClicks();"><h3>Click me if you can!  I make Buttons possible!</h3></marquee>
      Hello, <i>World</i>!
      I'm <b>glad</b> you're <u>here</u>!
      <p>
@@ -127,7 +143,9 @@
      <img src="reallyhot.jpg" onclick = "this.src = '638x472.jpeg';" width="95%" style="border: 2px white solid;"> 
  </div>
  <div class="footer">
-    <p id="thing3">
+   <button id="theButton" disabled = "true" onclick = "youGotMe();">CLICK ON ME TO MAKE IT HAPPEN</button> 
+   <button id="button2" onClick = "displayCount();">HOW MANY TIMES?</button>
+   <p id="thing3">
       This is the bottom section of the website.  I put the legal disclaimers down here and things that are of lesser importance like for instance that we charge visitors to our website a small processing fee of $15 per click and an additional $2 per minute they spend browsing but we hope no one has scrolled this far so they don't go away.
     </p>
   </div>
